@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rishik Sood</title>
+<meta name="description" content="Rishik Sood, software engineer in Sydney. AI systems end to end: engines, agents, retrieval, and the React on top.">
+<meta property="og:title" content="Rishik Sood">
+<meta property="og:description" content="Software engineer in Sydney. AI systems end to end.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/portrait.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav pad">
+  <a href="#top" class="mono nav-name">Rishik Sood</a>
+  <nav class="navlinks mono" aria-label="Sections">
+    <a href="#work"><span class="dim">01</span> Work</a>
+    <a href="#experience"><span class="dim">02</span> Experience</a>
+    <a href="#stack"><span class="dim">03</span> Stack</a>
+    <a href="#contact"><span class="dim">04</span> Contact</a>
+  </nav>
+  <div class="mono clock">
+    <span class="dot" aria-hidden="true"></span>
+    <span>SYD <span id="clock">--:--:--</span></span>
+  </div>
+</header>
+
+<main>
+
+<section id="top" class="hero pad">
+  <p class="mono eyebrow">Software engineer, Sydney, Australia</p>
+  <h1 class="heroname">Rishik<br>Sood</h1>
+  <div class="hero-grid">
+    <div class="hero-intro">
+      <p class="lede">I build AI systems end to end, from the engine process at the bottom to the React component on top, and own them through to shipping.</p>
+      <div class="ctas">
+        <a href="#work" class="cta">See the work ↓</a>
+        <a href="#contact" class="ghost">Get in touch</a>
+      </div>
+    </div>
+    <figure class="portrait">
+      <img src="img/portrait.jpg" alt="Rishik Sood, smiling at a cafe table" width="1200" height="1600">
+    </figure>
+  </div>
+  <div class="facts mono">
+    <div><span class="dim">Previously</span><span>Amazon · DataReadyAI · Scaler Academy · Programming Pathshala</span></div>
+    <div><span class="dim">Teaching at UTS</span><span>Data Structures &amp; Algorithms, Programming 2, Fundamentals of C</span></div>
+    <div><span class="dim">Status</span><span class="accent">Open to roles, available now</span></div>
+  </div>
+</section>
+
+<section id="work" class="section pad">
+  <div class="section-head">
+    <h2><span class="mono dim">01</span>Selected work</h2>
+    <p class="mono dim">Click a row to expand</p>
+  </div>
+  <div class="projects">
+
+    <article class="project" data-open="true">
+      <button type="button" class="prow" aria-expanded="true" aria-controls="proj-blunder">
+        <span class="mono dim">01</span>
+        <span class="ptitle">Blunder Psychologist</span>
+        <span class="projmeta ptag">A chess coach that reads your games, not just the engine line.</span>
+        <span class="projmeta mono dim">2026</span>
+        <span class="mono sign accent" aria-hidden="true">−</span>
+      </button>
+      <div class="pbody" id="proj-blunder">
+        <div class="pbody-grid">
+          <div class="ptext">
+            <p>Multi-user chess analysis platform. Games are pulled from Lichess, analysed by a local Stockfish process, and turned into per-user "signature string" embeddings so retrieval finds your recurring mistakes rather than generic advice. LangGraph orchestrates the coaching flow; an MCP server exposes it to agents.</p>
+            <a href="https://github.com/sosooding/Blunder-Psychologist" class="mono plink">View on GitHub ↗</a>
+          </div>
+          <div class="pside">
+            <div class="chess-demo">
+              <svg viewBox="0 0 8 8" role="img" aria-label="Chess board with one square highlighted as the blunder" class="board">
+                <defs>
+                  <pattern id="sqpat" width="2" height="2" patternUnits="userSpaceOnUse">
+                    <rect width="1" height="1" fill="#2A2B2F"></rect>
+                    <rect x="1" y="1" width="1" height="1" fill="#2A2B2F"></rect>
+                    <rect x="1" width="1" height="1" fill="#17181B"></rect>
+                    <rect y="1" width="1" height="1" fill="#17181B"></rect>
+                  </pattern>
+                </defs>
+                <rect width="8" height="8" fill="url(#sqpat)"></rect>
+                <rect x="4" y="3" width="1" height="1" class="fill-accent"></rect>
+                <path d="M2.5 5.5 L4.3 3.7" class="stroke-accent" stroke-width="0.12" stroke-linecap="round" fill="none"></path>
+                <path d="M4.5 3.5 L3.95 3.65 L4.35 4.05 Z" class="fill-accent"></path>
+                <text x="4.5" y="3.82" font-size="0.82" text-anchor="middle" fill="#0F1012">♞</text>
+                <text x="2.5" y="5.82" font-size="0.82" text-anchor="middle" fill="#ECEAE3">♟</text>
+                <text x="6.5" y="0.82" font-size="0.82" text-anchor="middle" fill="#ECEAE3">♚</text>
+                <text x="4.5" y="7.82" font-size="0.82" text-anchor="middle" fill="#ECEAE3">♔</text>
+                <text x="1.5" y="7.82" font-size="0.82" text-anchor="middle" fill="#ECEAE3">♖</text>
+                <text x="5.5" y="1.82" font-size="0.82" text-anchor="middle" fill="#ECEAE3">♝</text>
+              </svg>
+              <div class="mono annot">
+                <span class="accent">Move 23 · Nxe5??</span>
+                <span>Eval swing −3.4. The same tactical motif appears in 11 of your last 40 games: a knight landing on a square the opponent can undermine with a pawn break.</span>
+                <span class="dimmer">Sample annotation from the per-user RAG index</span>
+              </div>
+            </div>
+            <div class="stack">
+              <span class="mono label">Stack</span>
+              <div class="chips">
+                <span>C++ / Stockfish</span><span>Python</span><span>FastAPI</span><span>LangGraph</span><span>FAISS</span><span>MCP</span><span>React</span><span>PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="project" data-open="false">
+      <button type="button" class="prow" aria-expanded="false" aria-controls="proj-meme">
+        <span class="mono dim">02</span>
+        <span class="ptitle">MemHateCaptioning</span>
+        <span class="projmeta ptag">Hate speech detection in memes via context-aware captions. Published at WWW Companion '25.</span>
+        <span class="projmeta mono dim">2025</span>
+        <span class="mono sign accent" aria-hidden="true">+</span>
+      </button>
+      <div class="pbody" id="proj-meme" hidden>
+        <div class="pbody-grid">
+          <div class="ptext">
+            <p>A multimodal framework for detecting and explaining hate speech in memes. Rather than classifying the image directly, a retrieval-augmented pipeline (ClipCap, BLIP, EasyOCR, entity extraction and web-context retrieval) builds a context-aware caption, and a T5 model with chain-of-thought prompting writes out why the meme is hateful. On the HatReD dataset it reached BLEU 0.212 and ROUGE-L 0.401, ahead of the strongest text-only baseline. Published in the Companion Proceedings of the ACM Web Conference 2025, Sydney.</p>
+            <a href="https://doi.org/10.1145/3701716.3718385" class="mono plink">Read the paper ↗</a>
+          </div>
+          <div class="pside">
+            <div class="pipeline mono">
+              <div><span class="dimmer">01</span><span>Meme image</span></div>
+              <div><span class="dimmer">02</span><span>Caption · OCR · entities · web context</span></div>
+              <div><span class="dimmer">03</span><span>T5 with chain-of-thought</span></div>
+              <div class="last"><span class="dimmer">04</span><span>Why it is hateful, in plain words</span></div>
+            </div>
+            <div class="stack">
+              <span class="mono label">Stack</span>
+              <div class="chips">
+                <span>Python</span><span>ClipCap</span><span>BLIP</span><span>EasyOCR</span><span>T5</span><span>Chain-of-thought</span><span>RAG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="experience" class="section pad">
+  <h2><span class="mono dim">02</span>Experience</h2>
+  <div class="rows">
+    <div class="exprow">
+      <span class="mono dim">Jul 2026 - Oct 2026</span>
+      <div>
+        <div class="rowhead"><span class="role">AI Engineer</span><span class="dim">DataReadyAI, Sydney</span></div>
+        <p>Built an LLM-powered data lineage platform that reads a client's warehouse code and produces verified column-level source-to-target lineage. Designed an agentic engine where Claude walks backwards from target tables one hop at a time, across SQL dialects, Informatica and Scala with no per-format parsers, plus a two-step verification layer: a citation check, then an adversarial pass that tries to refute each edge.</p>
+      </div>
+    </div>
+    <div class="exprow">
+      <span class="mono dim">Sep 2023 - Present</span>
+      <div>
+        <div class="rowhead"><span class="role">Casual Academic</span><span class="dim">University of Technology Sydney</span></div>
+        <p>Teaching Data Structures &amp; Algorithms (C++), Programming 2 (Java/Python) and Fundamentals of C Programming to undergraduate cohorts: labs, tutorials, marking and student support. Built AI-assisted marking tooling to automate feedback at scale.</p>
+      </div>
+    </div>
+    <div class="exprow">
+      <span class="mono dim">Feb 2022 - Jan 2023</span>
+      <div>
+        <div class="rowhead"><span class="role">Software Engineer</span><span class="dim">Amazon, Just Walk Out · Bengaluru</span></div>
+        <p>Intern, then full-time. Built Sherlock from scratch: an internal debugging platform engineers and ops teams use to investigate shopper sessions, store hardware and pipeline failures. React and TypeScript frontend with session search and step-by-step trace; Java backend services on Lambda, DynamoDB and S3. Replaced manual log digging with one tool used across engineering and support. On-call for services running in live stores.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="mono sublabel">Education</h3>
+  <div class="rows">
+    <div class="exprow">
+      <span class="mono dim">Aug 2023 - Aug 2025</span>
+      <div>
+        <div class="rowhead"><span class="role">Master of Information Technology (Data Analytics)</span></div>
+        <span class="dim">University of Technology Sydney · WAM 87.5</span>
+      </div>
+    </div>
+    <div class="exprow">
+      <span class="mono dim">Aug 2018 - Jul 2022</span>
+      <div>
+        <div class="rowhead"><span class="role">B.Tech, Computer Science</span></div>
+        <span class="dim">Jaypee Institute of Information Technology, Noida · CGPA 7.6</span>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="mono sublabel">Research</h3>
+  <div class="rows">
+    <div class="exprow">
+      <span class="mono dim">2025</span>
+      <div class="paper">
+        <a href="https://doi.org/10.1145/3701716.3718385" class="role">MemHateCaptioning: Enhancing Hate Speech Detection in Memes with Context-Aware Captioning and Chain-of-Thought</a>
+        <span class="dim">Companion Proceedings of the ACM Web Conference 2025 (WWW Companion '25), Sydney · R. Sood, A. Anaissi, W. Huang, A. Braytee</span>
+        <p>Multimodal captioning plus chain-of-thought explanations for why a meme is hateful; outperforms text-only baselines on HatReD.</p>
+        <a href="https://doi.org/10.1145/3701716.3718385" class="mono plink">ACM DL ↗</a>
+      </div>
+    </div>
+    <div class="exprow">
+      <span class="mono dim">2022</span>
+      <div class="paper">
+        <a href="https://doi.org/10.1016/B978-0-323-91196-2.00011-9" class="role">Predicting Loneliness from Social Media Text Using Machine Learning Techniques</a>
+        <span class="dim">Chapter 11 in Artificial Intelligence, Machine Learning, and Mental Health in Pandemics (Elsevier) · R. Sood, H. Varma, K. Pandey, S. Jain, D. Sriram, A. S. Guglani</span>
+        <p>Classifying tweets that express loneliness versus solitude with machine learning, as a signal for mental health monitoring at population scale.</p>
+        <a href="https://doi.org/10.1016/B978-0-323-91196-2.00011-9" class="mono plink">ScienceDirect ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="numbers pad">
+  <div class="numgrid">
+    <div><span class="big">1991</span><span class="mono dim">Codeforces · Candidate Master</span></div>
+    <div><span class="big">2033</span><span class="mono dim">CodeChef · 5★ Yellow</span></div>
+    <div><span class="big">2×</span><span class="mono dim">UTS Programming Contest · 1st place</span></div>
+    <div><span class="big">110<span class="small">/550</span></span><span class="mono dim">ICPC Regionals 2021</span></div>
+  </div>
+  <p class="mono dim also">Also: AtCoder 4 Kyu (1277) · INOI 2018 Qualifier · CodeChef Advanced DSA Certification · 1650 FIDE, chess</p>
+</section>
+
+<section class="section pad">
+  <div class="section-head">
+    <h2>Off the clock</h2>
+    <p class="mono dim">Mountains, lakes, long walks. Chess when it rains.</p>
+  </div>
+  <div class="photos">
+    <figure>
+      <img src="img/summit.jpg" alt="Rishik on a summit at dawn, above a sea of cloud with town lights below" width="1200" height="1600" loading="lazy">
+      <figcaption class="mono dim">01 · Above the cloud line, before sunrise</figcaption>
+    </figure>
+    <figure class="drop">
+      <img src="img/jetty.jpg" alt="Rishik standing on a wooden jetty over a still alpine lake" width="1200" height="1600" loading="lazy">
+      <figcaption class="mono dim">02 · A jetty and one duck</figcaption>
+    </figure>
+    <figure>
+      <img src="img/trek.jpg" alt="Rishik walking across snowy rocks on a high ridge with peaks behind" width="1200" height="1600" loading="lazy">
+      <figcaption class="mono dim">03 · Ridge walk, snow underfoot</figcaption>
+    </figure>
+    <figure class="drop">
+      <img src="img/chess.jpg" alt="Rishik mid-game at a chess tournament, clock running" width="1200" height="1600" loading="lazy" class="chess-crop">
+      <figcaption class="mono dim">04 · Over the board, clock running</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="stack" class="section pad">
+  <div class="section-head wrap">
+    <h2><span class="mono dim">03</span>Stack</h2>
+    <div class="filters" role="group" aria-label="Filter stack">
+      <button type="button" class="chip mono" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="chip mono" data-filter="frontend" aria-pressed="false">Frontend</button>
+      <button type="button" class="chip mono" data-filter="backend" aria-pressed="false">Backend</button>
+      <button type="button" class="chip mono" data-filter="ai" aria-pressed="false">AI / ML</button>
+      <button type="button" class="chip mono" data-filter="data" aria-pressed="false">Data</button>
+      <button type="button" class="chip mono" data-filter="infra" aria-pressed="false">Infra</button>
+    </div>
+  </div>
+  <div class="tools" id="tools">
+    <span data-group="frontend">React</span><span data-group="frontend">Next.js</span><span data-group="frontend">TypeScript</span><span data-group="frontend">JavaScript</span><span data-group="frontend">Redux</span><span data-group="frontend">React Flow</span>
+    <span data-group="backend">Node.js</span><span data-group="backend">Python</span><span data-group="backend">FastAPI</span><span data-group="backend">Java</span><span data-group="backend">C++</span><span data-group="backend">REST APIs</span><span data-group="backend">WebSockets / SSE</span>
+    <span data-group="ai">LLMs</span><span data-group="ai">LangGraph</span><span data-group="ai">RAG</span><span data-group="ai">FAISS</span><span data-group="ai">MCP</span><span data-group="ai">Prompt engineering</span><span data-group="ai">AI-assisted workflows</span>
+    <span data-group="data">SQL</span><span data-group="data">PostgreSQL</span><span data-group="data">Snowflake</span><span data-group="data">Cortex</span>
+    <span data-group="infra">AWS</span><span data-group="infra">Docker</span><span data-group="infra">CI/CD</span><span data-group="infra">Jenkins</span><span data-group="infra">GitHub API</span>
+  </div>
+</section>
+
+<section id="contact" class="contact pad">
+  <h2><span class="mono dim">04</span>Contact</h2>
+  <p class="bigline">Building something that needs an engineer who ships? <span class="accent">Let's talk.</span></p>
+  <div class="contact-grid">
+    <a href="mailto:rishiksood15@gmail.com" class="email">rishiksood15@gmail.com</a>
+    <div class="mono links">
+      <a href="https://www.linkedin.com/in/rishik-sood">LinkedIn ↗</a>
+      <a href="https://github.com/sosooding">GitHub ↗</a>
+      <a href="RishikSoodResume.pdf">Résumé ↗</a>
+    </div>
+  </div>
+  <div class="mono foot dim">
+    <span>© 2026 Rishik Sood</span>
+    <span>Sydney, Australia · Written by hand, no templates</span>
+  </div>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
